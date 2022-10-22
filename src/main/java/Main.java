@@ -23,7 +23,9 @@ public class Main {
 
 		Person harry1 = createPerson("Harry");
 
-		boolean harry = harry1.isEnrolled() && harry1.getName().equals("Harry");
+		if  (harry1.isEnrolled() && harry1.getName().equals("Harry")) {
+			harry1.setName("blub");
+		}
 		Person frodo = createPerson("Frodo");
 
 		List<Person> persons = List.of(harry1, frodo);

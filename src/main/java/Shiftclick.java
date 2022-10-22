@@ -7,10 +7,11 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Drop Frame
+ * Plugin (object call)
+ * Evaluate and Log + Hit Message
  * ShiftClick for logging
  */
-public class Main2 {
+public class Shiftclick {
 
 	public static void main(String[] args) {
 		System.out.println("Test");
