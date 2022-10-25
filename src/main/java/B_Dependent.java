@@ -2,14 +2,15 @@
  * Dependent Breakpoint
  * Condition
  * Callers Fillters (alt enter )
- *Methoden Klasse Dependent + Pattern importantRealWork ==> entry ==> Breakpoint bei Process wieder mit OnceHit
+ * Methoden Klasse Dependent + Pattern importantRealWork ==> entry ==> Breakpoint bei Process wieder mit OnceHit
  */
-public class Dependent {
+public class B_Dependent {
 
 	public static void main(String[] args) {
 
-		for (int i = 0; i < 20; i++) {
+		for (int i = 1; i < 21; i++) {
 			someWarmUp();
+			System.out.println(i);
 		}
 
 		importantRealWork();
@@ -26,7 +27,7 @@ public class Dependent {
 
 	private static void process() {
 		int a = 0;
-		System.out.println("I was called");
+		System.out.println("Doing some process");
 		// do some processing
 	}
 

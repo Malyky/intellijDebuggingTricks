@@ -1,6 +1,5 @@
 import classes.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -8,10 +7,11 @@ import java.util.Random;
 /**
  * Pin Fields (z.B: name)
  * Renderer: z.B. Auf Persons. "Name") oder name + enroll
+ * Class level watch
  * Renderer auf Liste: this.size oder children: to Array (das verstehe ich nicht ganz https://www.jetbrains.com/help/idea/customizing-views.html#productivity_tips)
  *
  */
-public class PinFields {
+public class F_PinFields {
 
 	public static void main(String[] args) {
 		System.out.println("Test");

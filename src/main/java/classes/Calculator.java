@@ -10,11 +10,12 @@ public class Calculator {
 	public void doSomeCalcuations() {
 		System.out.println("a has value %s".formatted(a));
 
+		int c = 3;
 		increaseA();
-		System.out.println("a has value %s".formatted(a));
-		increaseB();
 
-		shiftClickMe(a);
+		System.out.println("a has value %s".formatted(a));
+
+		increaseB();
 
 		System.out.println("a has value %s".formatted(a));
 	}

@@ -1,26 +1,28 @@
-import java.util.List;
-import java.util.Random;
-
 /**
  * Drop Frame
  * Force Return
  * Force Exception
  */
-public class DropFrame {
+public class E_DropFrame {
 
 
 	public static void main(String[] args) {
 
 		int a = 100;
 
-		double processedA = process(a);
-		if (filter(processedA)) {
+		double modifiedA = modify(a);
+
+		if (filter(modifiedA)) {
 			System.out.println("Filter was true");
 		}
 
+		divideByA(a);
+
+
 	}
 
-	private static double process(int number) {
+
+	private static double modify(int number) {
 		double result;
 		result = number * 20;
 		result += 4;
@@ -40,6 +42,15 @@ public class DropFrame {
 		number = number % 3 + 1;
 
 		return number;
+	}
+
+
+	private static void divideByA(int a) {
+		try {
+			int c = 1/a;
+		} catch (ArithmeticException e) {
+			System.out.println(e);
+		}
 	}
 
 }

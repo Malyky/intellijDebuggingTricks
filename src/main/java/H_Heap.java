@@ -1,32 +1,35 @@
 import classes.Book;
-import classes.Calculator;
 import classes.Person;
-import classes.University;
 
 import java.util.List;
 import java.util.Random;
 
 /**
- * Plugin (object call)
- * Evaluate and Log + Hit Message
- * ShiftClick for logging
+ * Heap Show refering Objects  - eher nicht
+ * class level watch
+ * inline watch // depbug in println => s.length
+ * Lazey evaluation
+ * Hotswap?
  */
-public class Shiftclick {
+public class H_Heap {
+
+	public static final String FRODO = "Frodo";
+	public static final String HARRY = "Harry";
 
 	public static void main(String[] args) {
-		System.out.println("Test");
 
-		Calculator a = new Calculator();
-		a.doSomeCalcuations();
-		Person harry1 = createPerson("Harry");
-		Person frodo = createPerson("Frodo");
+		Person harry = createPerson(HARRY);
+		Person frodo = createPerson(FRODO);
+		Person tolkin = createPerson("Tolkin");
 
-		List<Person> persons = List.of(harry1, frodo);
+		processOnePerson(harry);
 
+	}
 
-		University uni = new University();
-		uni.enrollPersons(persons);
-
+	private static void processOnePerson(Person person) {
+		String name = person.getName();
+		System.out.println(name);
+		int a = 5;
 	}
 
 
@@ -54,12 +57,6 @@ public class Shiftclick {
 
 		return List.of(books.get(rand), books.get(rand2));
 	}
-
-	// Trick 1. Plugin ==> zeigen wie das funktioniert, z.B. bei Calcuator class (setter etc werden nicht rückgängig gemacht)
-	// DropFrame
-	// Log Expresison
-
-
 
 
 

@@ -5,29 +5,30 @@ import classes.University;
 
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 /**
- * Show stream
- * Show Exection Point for Breakpoint (alf f10)
- * Bookmarks + Memomics Bookmarks (F11 // Strg + F11) ; Shift 11 // Strg + Shift F11)
- * Restore breakpoint (run -> toggle brekapoint, oder bei breakpoint auf "restore breakpoint" drücken in linker zeile)
+ * Evluate mit F8
+ * Smart Evluate mit Alt F8
+ * Siehe Screenshot => Show tooltip value on cod eselection
+ * Intellij auto evaluate
+ * Jump To Source (Harry1)
  */
-public class Stream {
+public class A_JumpLine {
 
 	public static void main(String[] args) {
-		List<Person> persons = List.of(createPerson("Harry"), createPerson("Frodo"));
-		University uni = new University();
-		uni.enrollPersons(persons);
+		System.out.println("Test");
 
-		List<String> enrolledFrodos = persons.stream()
-			.filter(Person::isEnrolled)
-			.map(Person::getName)
-			.filter(p -> p.contains("Frodo"))
-			.collect(Collectors.toList());
+		Calculator a = new Calculator();
+		a.doSomeCalcuations();
 
+		Person person = createPerson("Harry");
 
-
+		if (person.isEnrolled() && person.getName().equals("Harry")) {
+			person.setName("blub");
+			System.out.println("Harry is enrolled");
+		} else {
+			System.out.println("Person" + person.getName() + " is not enrolled");
+		}
 	}
 
 

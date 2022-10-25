@@ -1,6 +1,7 @@
 package classes;
 
 import java.util.List;
+import java.util.Locale;
 
 public class University {
 	int a = 0;
@@ -11,6 +12,9 @@ public class University {
 
 	public void enrollPersons(List<Person> persons) {
 		for (Person person : persons) {
+			if (person.name.toLowerCase(Locale.ROOT).contains("small")) {
+				return;
+			}
 			person.setEnrolled(true);
 		}
 	}

@@ -1,38 +1,29 @@
 import classes.Book;
-import classes.Calculator;
 import classes.Person;
 import classes.University;
 
-import java.net.http.HttpClient;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
- * Evluate mit F8
- * Smart Evluate mit Alt F8
- * Siehe Screenshot => Show tooltip value on cod eselection
- * Jump To Source (Harry1)
+ * Show stream
+ * Show Exection Point for Breakpoint (alf f10)
+ * Bookmarks + Memomics Bookmarks (F11 // Strg + F11) ; Shift 11 // Strg + Shift F11)
+ * Restore breakpoint (run -> toggle brekapoint, oder bei breakpoint auf "restore breakpoint" drücken in linker zeile)
  */
-public class Main {
+public class G_Stream {
 
 	public static void main(String[] args) {
-		System.out.println("Test");
-
-		Calculator a = new Calculator();
-		a.doSomeCalcuations();
-
-		Person harry1 = createPerson("Harry");
-
-		if  (harry1.isEnrolled() && harry1.getName().equals("Harry")) {
-			harry1.setName("blub");
-		}
-		Person frodo = createPerson("Frodo");
-
-		List<Person> persons = List.of(harry1, frodo);
-
-
+		List<Person> persons = List.of(createPerson("Harry"), createPerson("Frodo"), createPerson("Frodoline"), createPerson("Small Harry"));
 		University uni = new University();
 		uni.enrollPersons(persons);
+
+		List<String> enrolledFrodos = persons.stream()
+			.filter(Person::isEnrolled)
+			.map(Person::getName)
+			.filter(p -> p.contains("Frodo"))
+			.collect(Collectors.toList());
 
 	}
 
