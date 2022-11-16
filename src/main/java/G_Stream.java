@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class G_Stream {
 
 	public static void main(String[] args) {
-		List<Person> persons = List.of(createPerson("Harry"), createPerson("Frodo"), createPerson("Frodoline"), createPerson("Small Harry"));
+		List<Person> persons = List.of(createPerson("Harry"), createPerson("Frodo"), createPerson("Frodoline"), createPerson("Young Harry"));
 		University uni = new University();
 		uni.enrollPersons(persons);
 

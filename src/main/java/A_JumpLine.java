@@ -23,7 +23,7 @@ public class A_JumpLine {
 
 		Person person = createPerson("Harry");
 
-		if (person.isEnrolled() && person.getName().equals("Harry")) {
+		if (person.isEnrolled() && person.getName().equals("blub")) {
 			person.setName("blub");
 			System.out.println("Harry is enrolled");
 		} else {

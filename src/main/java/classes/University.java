@@ -12,7 +12,7 @@ public class University {
 
 	public void enrollPersons(List<Person> persons) {
 		for (Person person : persons) {
-			if (person.name.toLowerCase(Locale.ROOT).contains("small")) {
+			if (person.name.toLowerCase(Locale.ROOT).contains("young")) {
 				return;
 			}
 			person.setEnrolled(true);
