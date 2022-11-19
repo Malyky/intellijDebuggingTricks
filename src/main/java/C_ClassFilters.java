@@ -28,11 +28,11 @@ public class C_ClassFilters {
 	}
 
 
-	interface a {
+	interface Profession {
 		String getProfession();
 	}
 
-	static abstract class Worker implements a {
+	static abstract class Worker implements Profession {
 
 		void doSomeWork() {
 			System.out.println("Im a good worker");

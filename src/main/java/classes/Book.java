@@ -1,5 +1,4 @@
 package classes;
-
 public class Book implements IBook {
 
 	private String name;
@@ -13,5 +12,21 @@ public class Book implements IBook {
 	@Override
 	public void deleteAllBooks() {
 
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 }

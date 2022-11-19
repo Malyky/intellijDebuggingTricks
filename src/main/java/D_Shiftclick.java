@@ -9,7 +9,7 @@ public class D_Shiftclick {
 
 		for (int i = 0; i < 10; i++) {
 			b = increment(b);
-		//	System.out.println("Value of b " + b);
+			// System.out.println("Value of b " + b);
 		}
 
 		System.out.println("Final value of b is " + b);

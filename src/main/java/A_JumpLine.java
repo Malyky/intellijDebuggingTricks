@@ -16,14 +16,12 @@ import java.util.Random;
 public class A_JumpLine {
 
 	public static void main(String[] args) {
-		System.out.println("Test");
-
 		Calculator a = new Calculator();
 		a.doSomeCalcuations();
 
 		Person person = createPerson("Harry");
 
-		if (person.isEnrolled() && person.getName().equals("blub")) {
+		if (person.isEnrolled() && person.getName().equals("Harry")) {
 			person.setName("blub");
 			System.out.println("Harry is enrolled");
 		} else {

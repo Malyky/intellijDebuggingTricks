@@ -17,8 +17,6 @@ public class E_DropFrame {
 		}
 
 		divideByA(a);
-
-
 	}
 
 

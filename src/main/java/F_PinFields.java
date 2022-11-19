@@ -14,8 +14,6 @@ import java.util.Random;
 public class F_PinFields {
 
 	public static void main(String[] args) {
-		System.out.println("Test");
-
 		List<Person> persons = Arrays.asList(createPerson("Harry"), createPerson("Frodo"));
 
 		University uni = new University();

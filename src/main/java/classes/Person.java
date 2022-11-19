@@ -3,7 +3,6 @@ package classes;
 import java.util.List;
 
 public class Person {
-
 	String name;
 	List<Book> favouriteBooks;
 	boolean enrolled;

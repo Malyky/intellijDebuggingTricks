@@ -15,12 +15,13 @@ public class H_Heap {
 
 	public static final String FRODO = "Frodo";
 	public static final String HARRY = "Harry";
+	public static final String TOLKIN = "Tolkin";
 
 	public static void main(String[] args) {
 
 		Person harry = createPerson(HARRY);
 		Person frodo = createPerson(FRODO);
-		Person tolkin = createPerson("Tolkin");
+		Person tolkin = createPerson(TOLKIN);
 
 		processOnePerson(harry);
 
